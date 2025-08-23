@@ -1,0 +1,43 @@
+
+
+POST  /api/orders/
+Host:  127.0.0.1:8000
+Content-Type: application/json
+
+{
+  "customer": 2,
+  "items": [
+    {"product": "bc4bd7dbceba44e4a3b760822bcf3560", "quantity": 2}
+  ]
+}
+
+###
+
+GET /api/orders/44fea10fc92747f0b9a455919bc5b665/
+Host:  127.0.0.1:8000
+
+###
+
+POST /api/payments/charge/
+Host:  127.0.0.1:8000
+Content-Type: application/json
+Idempotency-Key: charge:44fea10fc92747f0b9a455919bc5b65
+
+{
+  "order": "44fea10fc92747f0b9a455919bc5b665"
+}
+
+###
+
+POST /api/webhooks/momo/
+Host:  127.0.0.1:8000
+Content-Type: application/json
+X-Momo-Signature: 183fddf93703e3e6037a151291d47f15fbd092650d3ba2cca2486a2879543dc8
+
+{
+  "provider_reference": "momo_txn_456def789",
+  "order_id": "44fea10fc92747f0b9a455919bc5b665",
+  "status": "success"
+}
+
+
