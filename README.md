@@ -127,7 +127,7 @@ How to Use:
 
 - Install the REST Client extension in VS Code.
 
-- Open the api.http orapi.rest file in the base directory.
+- Open the api.http or api.rest file in the base directory.
 
 - Hover over a request and click "Send Request".
 
