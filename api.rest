@@ -5,15 +5,15 @@ Host:  127.0.0.1:8000
 Content-Type: application/json
 
 {
-  "customer": 2,
+  "customer": 1,
   "items": [
-    {"product": "bc4bd7dbceba44e4a3b760822bcf3560", "quantity": 2}
+    {"product": "57ba4bb3-857e-4ebe-b634-ac43c013235b", "quantity": 2}
   ]
 }
 
 ###
 
-GET /api/orders/44fea10fc92747f0b9a455919bc5b665/
+GET /api/orders/70307493-246f-4c44-8f08-de30d576653d/
 Host:  127.0.0.1:8000
 
 ###
@@ -21,10 +21,10 @@ Host:  127.0.0.1:8000
 POST /api/payments/charge/
 Host:  127.0.0.1:8000
 Content-Type: application/json
-Idempotency-Key: charge:44fea10fc92747f0b9a455919bc5b65
+Idempotency-Key: charge:70307493-246f-4c44-8f08-de30d576653d
 
 {
-  "order": "44fea10fc92747f0b9a455919bc5b665"
+  "order": "70307493-246f-4c44-8f08-de30d576653d"
 }
 
 ###
@@ -32,11 +32,11 @@ Idempotency-Key: charge:44fea10fc92747f0b9a455919bc5b65
 POST /api/webhooks/momo/
 Host:  127.0.0.1:8000
 Content-Type: application/json
-X-Momo-Signature: 183fddf93703e3e6037a151291d47f15fbd092650d3ba2cca2486a2879543dc8
+X-Momo-Signature: 6be4787abf45f82df5db4efa9385d87fe099f2ad46dc08f9f1603eb967f6337c
 
 {
   "provider_reference": "momo_txn_456def789",
-  "order_id": "44fea10fc92747f0b9a455919bc5b665",
+  "order_id": "70307493-246f-4c44-8f08-de30d576653d",
   "status": "success"
 }
 

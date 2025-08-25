@@ -1,8 +1,16 @@
-# Order ->Payment -> Notify API Demo
+# Project A: Order ->Payment -> Notify API Demo
 
 This is a simple Django-based API for handling **orders** and **mobile money (MoMo) payments**, including idempotent charges and webhook callbacks.
 
 ---
+
+## Technology Stack
+
+- **Django & Python**: Core web framework for API endpoints and business logic  
+- **Celery**: Distributed task queue to handle background tasks (sending SMS, processing DLRs)  
+- **Redis**: Message broker for Celery, enabling communication between web and worker services  
+- **PostgreSQL**: Primary database for message storage and application data  
+- **Docker & Docker Compose**: Orchestration for all services, providing a consistent isolated environment
 
 ## Features
 
@@ -112,8 +120,16 @@ POSTGRES_DB=<db_name>
 POSTGRES_USER=<db_user>
 POSTGRES_PASSWORD=<db_password>
 POSTGRES_HOST=<db_host>
-POSTGRES_PORT=5432
+POSTGRES_PORT=<db_port>
 ```
+
+How to Use:
+
+- Install the REST Client extension in VS Code.
+
+- Open the api.http file in the base directory.
+
+- Hover over a request and click "Send Request".
 
 
 
