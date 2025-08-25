@@ -6,10 +6,10 @@ This is a simple Django-based API for handling **orders** and **mobile money (Mo
 
 ## Technology Stack
 
-- **Django & Python**: Core web framework for API endpoints and business logic  
-- **Celery**: Distributed task queue to handle background tasks (sending SMS, processing DLRs)  
+- **Django, Django Rest Framework, & Python**: Core web framework for API endpoints and business logic  
+- **Celery**: Distributed task queue to handle background tasks (sending messages)  
 - **Redis**: Message broker for Celery, enabling communication between web and worker services  
-- **PostgreSQL**: Primary database for message storage and application data  
+- **PostgreSQL**: Primary database for storage 
 - **Docker & Docker Compose**: Orchestration for all services, providing a consistent isolated environment
 
 ## Features
