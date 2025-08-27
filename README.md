@@ -27,6 +27,13 @@ This is a simple Django-based API for handling **orders** and **mobile money (Mo
 
 ---
 
+### Admin endpoint to add the product record
+```http://127.0.0.1:8000/admin```
+
+In another terminal run ``docker compose run --rm web python manage.py createsuperuser`` to create superuser to access admin panel
+
+
+
 ## API Endpoints
 
 ### 1. Create Order
